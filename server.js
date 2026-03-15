@@ -1,4 +1,3 @@
-
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
@@ -25,6 +24,7 @@ app.use('/uploads', express.static('uploads'));
 app.use("/user",require("./routes/user"))
 app.use("/complaint",require("./routes/complaint"));
 app.use("/comment",require("./routes/comment"));
+app.use("/",require("./routes/analytics"));
 // Root Route
 app.get('/', (req, res) => {
   res.send('API is running...');
